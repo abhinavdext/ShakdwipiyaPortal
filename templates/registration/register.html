@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Shakdwipiya Brahman Registration</title>
+
+<style>
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: linear-gradient(135deg, #fff8f0, #f5eee6);
+        color: #2d2d2d;
+        min-height: 100vh;
+        padding: 35px 15px 100px;
+    }
+
+    /* Main Container */
+
+    .container {
+        max-width: 1050px;
+        margin: auto;
+        background: #ffffff;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.10);
+    }
+
+    /* Header */
+
+    .header {
+        background: linear-gradient(135deg, #7b1e1e, #b33b1f);
+        color: white;
+        padding: 35px 25px;
+        text-align: center;
+    }
+
+    .om-symbol {
+        font-size: 42px;
+        margin-bottom: 8px;
+    }
+
+    .header h1 {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    .header p {
+        font-size: 15px;
+        opacity: 0.9;
+    }
+
+    /* Form */
+
+    .form-container {
+        padding: 35px;
+    }
+
+    .intro {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .intro h2 {
+        color: #7b1e1e;
+        margin-bottom: 8px;
+    }
+
+    .intro p {
+        color: #666;
+        font-size: 14px;
+    }
+
+    /* Sections */
+
+    .section {
+        margin-bottom: 30px;
+    }
+
+    .section-title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        color: #7b1e1e;
+        font-size: 20px;
+        font-weight: 600;
+
+        border-bottom: 2px solid #f0d9cc;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+    .section-number {
+        width: 30px;
+        height: 30px;
+        background: #7b1e1e;
+        color: white;
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 14px;
+    }
+
+    /* Django Form */
+
+    form p {
+        margin-bottom: 18px;
+    }
+
+    label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 6px;
+        color: #444;
+        font-size: 14px;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px 14px;
+
+        border: 1px solid #d9d9d9;
+        border-radius: 8px;
+
+        font-size: 14px;
+        font-family: inherit;
+
+        background: #fff;
+
+        transition: 0.2s;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+        outline: none;
+        border-color: #b33b1f;
+        box-shadow: 0 0 0 3px rgba(179, 59, 31, 0.10);
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    /* Grid */
+
+    .form-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0 25px;
+    }
+
+    /* Errors */
+
+    .errorlist {
+        list-style: none;
+        color: #c62828;
+        font-size: 13px;
+        margin-top: 5px;
+    }
+
+    /* Register Button */
+
+    .submit-area {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .register-btn {
+        width: 100%;
+        max-width: 400px;
+
+        padding: 15px 25px;
+
+        background: linear-gradient(
+            135deg,
+            #7b1e1e,
+            #b33b1f
+        );
+
+        color: white;
+        border: none;
+        border-radius: 9px;
+
+        font-size: 17px;
+        font-weight: 600;
+
+        cursor: pointer;
+
+        transition: 0.25s;
+    }
+
+    .register-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 7px 20px rgba(123, 30, 30, 0.25);
+    }
+
+    /* Footer */
+
+    .footer {
+        text-align: center;
+        margin-top: 25px;
+        color: #777;
+        font-size: 13px;
+    }
+
+    .footer strong {
+        color: #7b1e1e;
+    }
+
+    /* Creator Credit */
+
+    .creator-credit {
+        position: fixed;
+        right: 18px;
+        bottom: 15px;
+
+        background: rgba(255, 255, 255, 0.96);
+
+        padding: 10px 15px;
+
+        border-radius: 10px;
+
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+
+        font-size: 12px;
+        color: #555;
+
+        z-index: 1000;
+    }
+
+    .creator-credit strong {
+        color: #7b1e1e;
+    }
+
+    .creator-credit a {
+        color: #b33b1f;
+        text-decoration: none;
+    }
+
+    .creator-credit a:hover {
+        text-decoration: underline;
+    }
+
+    /* Mobile */
+
+    @media (max-width: 700px) {
+
+        body {
+            padding: 15px 10px 90px;
+        }
+
+        .header {
+            padding: 28px 15px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+        }
+
+        .form-container {
+            padding: 22px 18px;
+        }
+
+        .form-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .section-title {
+            font-size: 18px;
+        }
+
+        .creator-credit {
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            text-align: center;
+        }
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+<div class="container">
+
+```
+<!-- Header -->
+
+<div class="header">
+
+    <div class="om-symbol">
+        ॐ
+    </div>
+
+    <h1>
+        Shakdwipiya Brahman
+    </h1>
+
+    <p>
+        Community Registration Portal
+    </p>
+
+</div>
+
+
+<!-- Form -->
+
+<div class="form-container">
+
+    <div class="intro">
+
+        <h2>
+            Registration Form
+        </h2>
+
+        <p>
+            Please provide your correct information to complete
+            your community registration.
+        </p>
+
+    </div>
+
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+
+        <!-- Personal Information -->
+
+        <div class="section">
+
+            <div class="section-title">
+
+                <span class="section-number">
+                    1
+                </span>
+
+                Personal Information
+
+            </div>
+
+            <div class="form-grid">
+
+                <p>
+                    {{ form.full_name.label_tag }}
+                    {{ form.full_name }}
+                    {{ form.full_name.errors }}
+                </p>
+
+                <p>
+                    {{ form.father_name.label_tag }}
+                    {{ form.father_name }}
+                    {{ form.father_name.errors }}
+                </p>
+
+                <p>
+                    {{ form.mother_name.label_tag }}
+                    {{ form.mother_name }}
+                    {{ form.mother_name.errors }}
+                </p>
+
+                <p>
+                    {{ form.date_of_birth.label_tag }}
+                    {{ form.date_of_birth }}
+                    {{ form.date_of_birth.errors }}
+                </p>
+
+                <p>
+                    {{ form.gender.label_tag }}
+                    {{ form.gender }}
+                    {{ form.gender.errors }}
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Contact Information -->
+
+        <div class="section">
+
+            <div class="section-title">
+
+                <span class="section-number">
+                    2
+                </span>
+
+                Contact Information
+
+            </div>
+
+            <div class="form-grid">
+
+                <p>
+                    {{ form.mobile.label_tag }}
+                    {{ form.mobile }}
+                    {{ form.mobile.errors }}
+                </p>
+
+                <p>
+                    {{ form.alternate_mobile.label_tag }}
+                    {{ form.alternate_mobile }}
+                    {{ form.alternate_mobile.errors }}
+                </p>
+
+                <p>
+                    {{ form.email.label_tag }}
+                    {{ form.email }}
+                    {{ form.email.errors }}
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Community Information -->
+
+        <div class="section">
+
+            <div class="section-title">
+
+                <span class="section-number">
+                    3
+                </span>
+
+                Community Information
+
+            </div>
+
+            <div class="form-grid">
+
+                <p>
+                    {{ form.gotra.label_tag }}
+                    {{ form.gotra }}
+                    {{ form.gotra.errors }}
+                </p>
+
+                <p>
+                    {{ form.pur.label_tag }}
+                    {{ form.pur }}
+                    {{ form.pur.errors }}
+                </p>
+
+                <p>
+                    {{ form.native_place.label_tag }}
+                    {{ form.native_place }}
+                    {{ form.native_place.errors }}
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Address -->
+
+        <div class="section">
+
+            <div class="section-title">
+
+                <span class="section-number">
+                    4
+                </span>
+
+                Address Information
+
+            </div>
+
+            <p>
+                {{ form.address.label_tag }}
+                {{ form.address }}
+                {{ form.address.errors }}
+            </p>
+
+            <div class="form-grid">
+
+                <p>
+                    {{ form.city.label_tag }}
+                    {{ form.city }}
+                    {{ form.city.errors }}
+                </p>
+
+                <p>
+                    {{ form.district.label_tag }}
+                    {{ form.district }}
+                    {{ form.district.errors }}
+                </p>
+
+                <p>
+                    {{ form.state.label_tag }}
+                    {{ form.state }}
+                    {{ form.state.errors }}
+                </p>
+
+                <p>
+                    {{ form.pincode.label_tag }}
+                    {{ form.pincode }}
+                    {{ form.pincode.errors }}
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Professional Information -->
+
+        <div class="section">
+
+            <div class="section-title">
+
+                <span class="section-number">
+                    5
+                </span>
+
+                Professional Information
+
+            </div>
+
+            <div class="form-grid">
+
+                <p>
+                    {{ form.occupation.label_tag }}
+                    {{ form.occupation }}
+                    {{ form.occupation.errors }}
+                </p>
+
+                <p>
+                    {{ form.education.label_tag }}
+                    {{ form.education }}
+                    {{ form.education.errors }}
+                </p>
+
+                <p>
+                    {{ form.marital_status.label_tag }}
+                    {{ form.marital_status }}
+                    {{ form.marital_status.errors }}
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Submit -->
+
+        <div class="submit-area">
+
+            <button
+                type="submit"
+                class="register-btn">
+
+                Register Now
+
+            </button>
+
+        </div>
+
+    </form>
+
+
+    <div class="footer">
+
+        <p>
+            Your information will be used for community
+            registration purposes.
+        </p>
+
+    </div>
+
+</div>
+```
+
+</div>
+
+<!-- Creator Credit -->
+
+<div class="creator-credit">
+
+```
+Developed by
+<strong>Abhinav Pandey</strong>
+<br>
+
+<a href="mailto:pandeyabhinav638@gmail.com">
+    pandeyabhinav638@gmail.com
+</a>
+```
+
+</div>
+
+</body>
+
+</html>

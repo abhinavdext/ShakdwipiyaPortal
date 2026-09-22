@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+```
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>
+    Registration Successful | Shakdwipiya Brahman
+</title>
+
+
+<style>
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    body {
+
+        font-family: "Segoe UI", Arial, sans-serif;
+
+        min-height: 100vh;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        padding: 30px 15px 100px;
+
+        background:
+            linear-gradient(
+                135deg,
+                #fff8f0,
+                #f5eee6
+            );
+
+        color: #333;
+
+    }
+
+
+    /* Main Card */
+
+    .success-card {
+
+        width: 100%;
+
+        max-width: 650px;
+
+        background: #ffffff;
+
+        border-radius: 20px;
+
+        padding: 45px 40px;
+
+        text-align: center;
+
+        box-shadow:
+            0 15px 45px
+            rgba(0, 0, 0, 0.12);
+
+    }
+
+
+    /* Success Icon */
+
+    .success-icon {
+
+        width: 85px;
+
+        height: 85px;
+
+        margin: 0 auto 25px;
+
+        border-radius: 50%;
+
+        background:
+            linear-gradient(
+                135deg,
+                #2e7d32,
+                #43a047
+            );
+
+        color: white;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        font-size: 45px;
+
+        font-weight: bold;
+
+        box-shadow:
+            0 8px 20px
+            rgba(46, 125, 50, 0.25);
+
+    }
+
+
+    /* Heading */
+
+    h1 {
+
+        color: #7b1e1e;
+
+        font-size: 30px;
+
+        margin-bottom: 12px;
+
+    }
+
+
+    .subtitle {
+
+        color: #555;
+
+        font-size: 16px;
+
+        line-height: 1.6;
+
+        margin-bottom: 30px;
+
+    }
+
+
+    /* Registration ID Box */
+
+    .registration-box {
+
+        background: #fff8f0;
+
+        border: 1px solid #f0d9cc;
+
+        border-radius: 12px;
+
+        padding: 22px;
+
+        margin: 25px 0;
+
+    }
+
+
+    .registration-label {
+
+        color: #777;
+
+        font-size: 13px;
+
+        margin-bottom: 8px;
+
+    }
+
+
+    .registration-id {
+
+        color: #7b1e1e;
+
+        font-size: 19px;
+
+        font-weight: 700;
+
+        word-break: break-all;
+
+        letter-spacing: 0.5px;
+
+    }
+
+
+    /* Success Message */
+
+    .success-message {
+
+        background: #edf7ee;
+
+        border-left: 4px solid #2e7d32;
+
+        padding: 15px;
+
+        border-radius: 6px;
+
+        color: #2e6b34;
+
+        font-size: 14px;
+
+        margin-bottom: 30px;
+
+    }
+
+
+    /* Button */
+
+    .register-again {
+
+        display: inline-block;
+
+        padding: 14px 30px;
+
+        background:
+            linear-gradient(
+                135deg,
+                #7b1e1e,
+                #b33b1f
+            );
+
+        color: white;
+
+        text-decoration: none;
+
+        border-radius: 9px;
+
+        font-size: 16px;
+
+        font-weight: 600;
+
+        transition: 0.25s;
+
+    }
+
+
+    .register-again:hover {
+
+        transform: translateY(-2px);
+
+        box-shadow:
+            0 7px 20px
+            rgba(123, 30, 30, 0.25);
+
+    }
+
+
+    /* Footer */
+
+    .footer {
+
+        margin-top: 30px;
+
+        padding-top: 20px;
+
+        border-top: 1px solid #eeeeee;
+
+        color: #777;
+
+        font-size: 13px;
+
+        line-height: 1.6;
+
+    }
+
+
+    .footer strong {
+
+        color: #7b1e1e;
+
+    }
+
+
+    /* Creator Credit */
+
+    .creator-credit {
+
+        position: fixed;
+
+        right: 18px;
+
+        bottom: 15px;
+
+        background:
+            rgba(255, 255, 255, 0.96);
+
+        padding: 10px 15px;
+
+        border-radius: 10px;
+
+        box-shadow:
+            0 4px 18px
+            rgba(0, 0, 0, 0.12);
+
+        font-size: 12px;
+
+        color: #555;
+
+        z-index: 1000;
+
+    }
+
+
+    .creator-credit strong {
+
+        color: #7b1e1e;
+
+    }
+
+
+    .creator-credit a {
+
+        color: #b33b1f;
+
+        text-decoration: none;
+
+    }
+
+
+    .creator-credit a:hover {
+
+        text-decoration: underline;
+
+    }
+
+
+    /* Mobile */
+
+    @media (max-width: 600px) {
+
+        body {
+
+            padding: 20px 12px 100px;
+
+        }
+
+
+        .success-card {
+
+            padding: 35px 22px;
+
+        }
+
+
+        .success-icon {
+
+            width: 75px;
+
+            height: 75px;
+
+            font-size: 38px;
+
+        }
+
+
+        h1 {
+
+            font-size: 25px;
+
+        }
+
+
+        .registration-id {
+
+            font-size: 16px;
+
+        }
+
+
+        .creator-credit {
+
+            left: 10px;
+
+            right: 10px;
+
+            bottom: 10px;
+
+            text-align: center;
+
+        }
+
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<!-- Success Card -->
+
+<div class="success-card">
+
+
+    <!-- Success Icon -->
+
+    <div class="success-icon">
+
+        ✓
+
+    </div>
+
+
+    <!-- Heading -->
+
+    <h1>
+
+        Registration Successful!
+
+    </h1>
+
+
+    <p class="subtitle">
+
+        Your registration has been completed
+        successfully.
+
+    </p>
+
+
+    <!-- Registration ID -->
+
+    <div class="registration-box">
+
+        <div class="registration-label">
+
+            YOUR REGISTRATION ID
+
+        </div>
+
+
+        <div class="registration-id">
+
+            {{ person.registration_id }}
+
+        </div>
+
+    </div>
+
+
+    <!-- Success Message -->
+
+    <div class="success-message">
+
+        ✓ Your details have been successfully
+        registered in our database.
+
+        <br>
+
+        Please keep your Registration ID safe
+        for future reference.
+
+    </div>
+
+
+    <!-- Register Again -->
+
+    <a
+        href="/"
+        class="register-again">
+
+        Register Another Person
+
+    </a>
+
+
+    <!-- Footer -->
+
+    <div class="footer">
+
+        <p>
+
+            Thank you for registering with the
+            <strong>
+                Shakdwipiya Brahman Community
+            </strong>.
+
+        </p>
+
+        <p>
+
+            Your information has been recorded
+            successfully.
+
+        </p>
+
+    </div>
+
+
+</div>
+
+
+<!-- Creator Credit -->
+
+<div class="creator-credit">
+
+    Developed by
+    <strong>Abhinav Pandey</strong>
+
+    <br>
+
+    <a href="mailto:pandeyabhinav638@gmail.com">
+
+        pandeyabhinav638@gmail.com
+
+    </a>
+
+</div>
+```
+
+</body>
+
+</html>
